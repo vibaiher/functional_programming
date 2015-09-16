@@ -23,4 +23,11 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--memory", "2048"]
     vb.customize ["modifyvm", :id, "--cpus", 2]
   end
+
+  # Provision with ansible
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "provisioning/playbook.yml"
+    ansible.inventory_path = "provisioning/default"
+    ansible.limit = "functional_programming"
+  end
 end
