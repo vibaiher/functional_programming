@@ -8,3 +8,6 @@
       apt: pkg=tmux state=latest
     - name: Install Haskell Platform
       apt: pkg=haskell-platform state=latest
+  roles:
+    - { role: ohr486.elixir, erlang_version: 18.1, elixir_version: v1.1.1 }
+    - { role: andrewvy.elixir, action: "setup" }
