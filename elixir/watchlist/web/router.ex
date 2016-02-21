@@ -5,6 +5,12 @@ defmodule Watchlist.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/", Watchlist do
+    pipe_through :api
+
+    get "/movies", MovieController, :index
+  end
+
   scope "/api", Watchlist do
     pipe_through :api
   end
