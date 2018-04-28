@@ -1,21 +1,29 @@
-Installing Phoenix
-------------------
+# App
 
-### Install nodejs
+This App is just a container of a set of tests and katas with the purpose of learning elixir.
 
-```
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-sudo apt-get install nodejs
-```
+## About elixir
 
-### Install hex
+### The language
 
-```
-mix local.hex
-```
+- [Introduction to elixir](https://elixir-lang.org/getting-started/introduction.html)
+- [elixir Koans](http://elixirkoans.io/)
 
-### Install Phoenix
+### Task runner
 
-```
-mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.1.1/phoenix_new-1.1.1.ez
-```
+- [mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
+
+### Dependency manager
+
+- [hex](https://hex.pm/)
+
+### Testing frameworks
+
+- [ExUnit](https://hexdocs.pm/ex_unit/ExUnit.html)
+- [espec](https://github.com/antonmi/espec)
+
+## Useful commands
+
+- Install dependencies `docker-compose run --rm elixir mix deps.get`
+- Compile application `docker-compose run --rm elixir mix compile`
+- Run tests `docker-compose run --rm elixir mix test`
