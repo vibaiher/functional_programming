@@ -5,7 +5,7 @@ ENV APP /opt/app/
 RUN mkdir -p $APP
 WORKDIR $APP
 
-RUN yes | mix local.hex
+RUN mix local.hex --force
 
 COPY . $APP
 RUN mix deps.get
