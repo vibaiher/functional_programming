@@ -4,3 +4,8 @@ services:
     build: ./elixir
     volumes:
       - './elixir:/opt/app'
+
+  scala:
+    build: ./scala
+    volumes:
+      - './scala:/opt/app'
