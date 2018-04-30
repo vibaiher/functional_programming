@@ -5,6 +5,11 @@ services:
     volumes:
       - './elixir:/opt/app'
 
+  elixir-koans:
+    build: ./elixir-koans
+    volumes:
+      - './elixir-koans/lib/koans:/elixir-koans/lib/koans'
+
   scala:
     build: ./scala
     volumes:
